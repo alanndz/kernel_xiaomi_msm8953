@@ -178,7 +178,7 @@
 			 < 2208000  MHZ_TO_MBPS(10362, 8) >;
 	};
 
-	mincpubw-compute: qcom,mincpubw-compute {
+	mincpubw_compute: qcom,mincpubw-compute {
 		compatible = "qcom,arm-cpu-mon";
 		qcom,cpulist = < &CPU0 &CPU1 &CPU2 &CPU3
 				&CPU4 &CPU5 &CPU6 &CPU7 >;
