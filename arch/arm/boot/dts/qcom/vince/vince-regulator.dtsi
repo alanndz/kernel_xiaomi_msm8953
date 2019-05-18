@@ -34,7 +34,7 @@
 		compatible = "qcom,cpr4-msm8953-apss-regulator";
 		reg = <0xb018000 0x4000>, <0xa4000 0x1000>;
 		reg-names = "cpr_ctrl", "fuse_base";
-		interrupts = <GIC_SPI 15 IRQ_TYPE_EDGE_RISING>;
+		interrupts = <0x0 0xf 0x1>;
 		interrupt-names = "cpr";
 
 		qcom,cpr-ctrl-name = "apc";
@@ -49,14 +49,14 @@
 		qcom,cpr-down-error-step-limit = <1>;
 		qcom,cpr-up-error-step-limit = <1>;
 
-		qcom,apm-ctrl = <&apc_apm>;
+		qcom,apm-ctrl = <0x138>;
 		qcom,apm-threshold-voltage = <850000>;
 		qcom,apm-hysteresis-voltage = <5000>;
 
-		vdd-supply = <&pm8953_s5>;
-		qcom,voltage-step = <5000>;
-		vdd-limit-supply = <&pm8953_s5_limit>;
-		mem-acc-supply = <&apc_mem_acc_vreg>;
+		vdd-supply = <0x139>;
+		qcom,voltage-step = <0x1388>;
+		vdd-limit-supply = <0x13a>;
+		mem-acc-supply = <0x13b>;
 
 		qcom,cpr-enable;
 		qcom,cpr-hw-closed-loop;
