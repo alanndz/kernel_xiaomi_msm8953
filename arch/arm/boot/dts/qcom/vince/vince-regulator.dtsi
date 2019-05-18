@@ -27,7 +27,7 @@
 	};
 };
 
-& soc {
+&soc {
 	/delete-node/ cpr4-ctrl@b018000;
 
 	cpr4-ctrl@b018000 {
