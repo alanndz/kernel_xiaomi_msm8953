@@ -21,8 +21,6 @@
 	/delete-node/ qcom,mincpubw;
 	/delete-node/ qcom,cpu-bwmon;
 	/delete-node/ devfreq-cpufreq;
-	/delete-node/ qcom,cpubw-compute;
-	/delete-node/ qcom,mincpubw-compute;
 
 	clock_cpu: qcom,cpu-clock-8953@b116000 {
 		compatible = "qcom,cpu-clock-8953";
@@ -161,31 +159,4 @@
 		};
 	};
 
-	cpubw_compute: qcom,cpubw-compute {
-		compatible = "qcom,arm-cpu-mon";
-		qcom,cpulist = < &CPU0 &CPU1 &CPU2 &CPU3
-				&CPU4 &CPU5 &CPU6 &CPU7 >;
-		qcom,target-dev = <&cpubw>;
-		qcom,core-dev-table =
-			 <  652800  MHZ_TO_MBPS(2112, 8) >,
-			 < 1036800  MHZ_TO_MBPS(4224, 8) >,
-			 < 1401600  MHZ_TO_MBPS(7680, 8) >,
-			 < 1689600  MHZ_TO_MBPS(8448, 8) >,
-			 < 1804800  MHZ_TO_MBPS(9312, 8) >,
-			 < 1958400  MHZ_TO_MBPS(9312, 8) >,
-			 < 2016000  MHZ_TO_MBPS(9312, 8) >,
-			 < 2150400  MHZ_TO_MBPS(9750, 8) >,
-			 < 2208000  MHZ_TO_MBPS(10362, 8) >;
-	};
-
-	mincpubw_compute: qcom,mincpubw-compute {
-		compatible = "qcom,arm-cpu-mon";
-		qcom,cpulist = < &CPU0 &CPU1 &CPU2 &CPU3
-				&CPU4 &CPU5 &CPU6 &CPU7 >;
-		qcom,target-dev = <&mincpubw>;
-		qcom,core-dev-table =
-				<  652800 MHZ_TO_MBPS(2112, 8) >,
-				< 1401600 MHZ_TO_MBPS(4224, 8) >,
-				< 2208000 MHZ_TO_MBPS(8448, 8) >;
-	};
 };
