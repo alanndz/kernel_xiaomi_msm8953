@@ -31,4 +31,4 @@
 };
 
 #include "msm8953-vince-miui.dtsi"
-#include "vince/overlay.dtsi"
+
